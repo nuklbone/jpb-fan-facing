@@ -1,10 +1,62 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export const metadata = {
   title: "James Pitts Band Photo Gallery | Live Shots & Fan Moments",
   description:
     "Relive the James Pitts Band in photos—onstage energy, backstage moments, fan submissions, and downloadable tour art.",
 };
+
+// Live performance images from gallery
+const liveImages = [
+  "JPB RS 3.jpg",
+  "JPB RS.jpg",
+  "JP LIve.jpg",
+  "JP Yellow Tele Live.jpg",
+  "James 1 WBC.jpg",
+  "James 2 WBC.jpg",
+  "James 3 WBC.jpg",
+  "James 4 WBC.jpg",
+  "James 5 WBC.jpg",
+  "James 6 WBC.jpg",
+  "James 7 WBC.jpg",
+  "James 8 WBC.jpg",
+  "James 9 WBC.jpg",
+  "James 10 WBC.jpg",
+  "James 11 WBC.jpg",
+  "JPB Blues Bash Dancing.jpg",
+  "JPB Charlies BEer Garden.jpg",
+  "JPB StrangeBRew.jpg",
+  "JPB StrangeBRew 2.jpg",
+];
+
+// Fan gallery images
+const fanImages = [
+  "Audience.jpg",
+  "Audience 2.jpg",
+  "Aud Aub Pitts.jpg",
+  "Aud SCBC 1.jpg",
+  "Aud SCBC 2.jpg",
+  "Dance 1.jpg",
+  "Dance 2.jpg",
+  "Dance 3.jpg",
+  "Dance 4.jpg",
+  "Dance 5.jpg",
+  "Dance 6.jpg",
+  "Dance 7.jpg",
+];
+
+// Behind the scenes images
+const btsImages = [
+  "JPB SCBC Sound Check.jpg",
+  "JPB Recording CTPTB.jpg",
+  "JPB Bike Week.jpg",
+  "The Needle.jpg",
+  "Red Shed Drum View.jpg",
+  "Lights.jpg",
+  "McGraws.jpg",
+  "Gig Time.jpg",
+];
 
 export default function PhotosPage() {
   return (
@@ -34,11 +86,18 @@ export default function PhotosPage() {
             next time.
           </p>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-            {Array.from({ length: 12 }).map((_, i) => (
-              <div key={i} className="aspect-square rounded-lg border border-white/10 bg-brand-muted/20 hover:border-brand transition-colors cursor-pointer">
-                <p className="flex h-full items-center justify-center text-xs text-white/60">
-                  Live Photo {i + 1}
-                </p>
+            {liveImages.map((img, i) => (
+              <div
+                key={i}
+                className="group relative aspect-square overflow-hidden rounded-lg border border-white/10 hover:border-brand transition-colors cursor-pointer"
+              >
+                <Image
+                  src={`/images/gallery/${img}`}
+                  alt={`Live performance photo ${i + 1}`}
+                  fill
+                  className="object-cover transition-transform group-hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                />
               </div>
             ))}
           </div>
@@ -57,11 +116,18 @@ export default function PhotosPage() {
             monthly and tag the photographers so you get the shine.
           </p>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="aspect-square rounded-lg border border-white/10 bg-brand-muted/20 hover:border-brand transition-colors cursor-pointer">
-                <p className="flex h-full items-center justify-center text-xs text-white/60">
-                  Fan Photo {i + 1}
-                </p>
+            {fanImages.map((img, i) => (
+              <div
+                key={i}
+                className="group relative aspect-square overflow-hidden rounded-lg border border-white/10 hover:border-brand transition-colors cursor-pointer"
+              >
+                <Image
+                  src={`/images/gallery/${img}`}
+                  alt={`Fan photo ${i + 1}`}
+                  fill
+                  className="object-cover transition-transform group-hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                />
               </div>
             ))}
           </div>
@@ -81,11 +147,18 @@ export default function PhotosPage() {
             show how the show comes together.
           </p>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="aspect-square rounded-lg border border-white/10 bg-brand-muted/20 hover:border-brand transition-colors cursor-pointer">
-                <p className="flex h-full items-center justify-center text-xs text-white/60">
-                  BTS Photo {i + 1}
-                </p>
+            {btsImages.map((img, i) => (
+              <div
+                key={i}
+                className="group relative aspect-square overflow-hidden rounded-lg border border-white/10 hover:border-brand transition-colors cursor-pointer"
+              >
+                <Image
+                  src={`/images/gallery/${img}`}
+                  alt={`Behind the scenes photo ${i + 1}`}
+                  fill
+                  className="object-cover transition-transform group-hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                />
               </div>
             ))}
           </div>
@@ -103,10 +176,25 @@ export default function PhotosPage() {
             posters, lyric art, and album covers.
           </p>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
-            {Array.from({ length: 6 }).map((_, i) => (
+            {[
+              { img: "JPB 1 Sheet.jpg", title: "JPB One Sheet" },
+              { img: "JPB Tiers.jpg", title: "Tier Packages" },
+              { img: "Promo 1.png", title: "Promo Art 1" },
+              { img: "Promo 2.jpg", title: "Promo Art 2" },
+              { img: "Promo 3.jpg", title: "Promo Art 3" },
+              { img: "BLUES TONE AWARD.png", title: "Blues Tone Award" },
+            ].map((item, i) => (
               <div key={i} className="rounded-lg border border-white/10 bg-black/50 p-4">
-                <div className="mb-4 aspect-[3/4] rounded-lg bg-brand-muted/20"></div>
-                <h3 className="mb-2 text-lg font-semibold text-white">Poster/Art Title</h3>
+                <div className="relative mb-4 aspect-[3/4] overflow-hidden rounded-lg">
+                  <Image
+                    src={`/images/gallery/${item.img}`}
+                    alt={item.title}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-white">{item.title}</h3>
                 <div className="flex gap-2">
                   <Button variant="ghost" size="sm">
                     Download
