@@ -48,8 +48,8 @@ export default function VideosPage() {
           </p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { id: "CpNWb4mFong", title: "Rehearsal Space", desc: "James Pitts Band Rehearsal" },
-              { id: "WACXMo641B4", title: "Misery", desc: "Live at Oak Hill Music" },
+              { id: "XtsI5PZMqzU", title: "Shaky Ground", desc: "Live at The Brickyard (Wichita Blues Bash 2021)" },
+              { id: "q0CNKedKKgw", title: "Fishnet", desc: "WBS Blues Bash" },
               { id: "nqZ1xIAzV-U", title: "Are You Experienced", desc: "Hendrix Cover" },
             ].map((video, i) => (
               <div key={i} className="rounded-lg border border-white/10 bg-black/50 overflow-hidden">
@@ -70,34 +70,34 @@ export default function VideosPage() {
       <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
         <div className="w-full">
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">Feel the Crowd</h2>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <div className="mb-4 aspect-video rounded-lg border border-white/10 bg-black/50 overflow-hidden">
+                <YouTubeEmbed videoId="XtsI5PZMqzU" title="Shaky Ground - Live at The Brickyard" />
+              </div>
+              <p className="mb-2 text-lg font-semibold text-white">"Shaky Ground"</p>
+              <p className="mb-2 text-sm text-white/70">Live at The Brickyard (Wichita Blues Bash 2021)</p>
+            </div>
             <div>
               <div className="mb-4 aspect-video rounded-lg border border-white/10 bg-black/50 overflow-hidden">
                 <YouTubeEmbed videoId="q0CNKedKKgw" title="Fishnet - WBS Blues Bash" />
               </div>
-              <p className="mb-2 text-lg italic text-white">"The moment the room loses it."</p>
-              <p className="mb-2 text-sm text-white/70">"Still can't feel my feet from this night."</p>
-              <p className="text-xs text-white/60">– @KaylaDances</p>
+              <p className="mb-2 text-lg font-semibold text-white">"Fishnet"</p>
+              <p className="mb-2 text-sm text-white/70">James Pitts Band at the WBS Blues Bash</p>
             </div>
             <div>
               <div className="mb-4 aspect-video rounded-lg border border-white/10 bg-black/50 overflow-hidden">
-                <YouTubeEmbed videoId="WACXMo641B4" title="Misery - Live at Oak Hill Music" />
+                <YouTubeEmbed videoId="nqZ1xIAzV-U" title="Are You Experienced - Hendrix Cover" />
               </div>
-              <p className="mb-2 text-lg italic text-white">
-                "Award-winning groove in one take."
-              </p>
-              <p className="mb-2 text-sm text-white/70">"Peak tone and perfect mix."</p>
-              <p className="text-xs text-white/60">– @NHBluesDad</p>
+              <p className="mb-2 text-lg font-semibold text-white">"Are You Experienced"</p>
+              <p className="mb-2 text-sm text-white/70">Hendrix Cover</p>
             </div>
             <div>
               <div className="mb-4 aspect-video rounded-lg border border-white/10 bg-black/50 overflow-hidden">
-                <YouTubeEmbed videoId="jtS4NdaM7UA" title="Voodoo Child - Easy in McPherson" />
+                <YouTubeEmbed videoId="frcMWr1oXzo" title="Driving South & Love Me" />
               </div>
-              <p className="mb-2 text-lg italic text-white">
-                "James Pitts takes the solo into orbit."
-              </p>
-              <p className="mb-2 text-sm text-white/70">"Signature Hendrix cover"</p>
-              <p className="text-xs text-white/60">– Fan quote</p>
+              <p className="mb-2 text-lg font-semibold text-white">"Driving South & Love Me"</p>
+              <p className="mb-2 text-sm text-white/70">James Pitts Band</p>
             </div>
           </div>
         </div>
@@ -116,20 +116,20 @@ export default function VideosPage() {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-lg border border-white/10 bg-black/50 overflow-hidden">
               <div className="aspect-video rounded-t-lg">
-                <YouTubeEmbed videoId="CpNWb4mFong" title="Rehearsal Space" />
+                <YouTubeEmbed videoId="frcMWr1oXzo" title="Driving South & Love Me" />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-white">Rehearsal Room Jams</h3>
-                <p className="text-sm text-white/70">Latest episode</p>
+                <h3 className="text-lg font-semibold text-white">Driving South & Love Me</h3>
+                <p className="text-sm text-white/70">James Pitts Band</p>
               </div>
             </div>
             <div className="rounded-lg border border-white/10 bg-black/50 overflow-hidden">
               <div className="aspect-video rounded-t-lg">
-                <YouTubeEmbed videoId="fDXA6HRRIgY" title="Voodoo Child - WBS Blues Bash" />
+                <YouTubeEmbed videoId="nqZ1xIAzV-U" title="Are You Experienced - Hendrix Cover" />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-white">Travel & Road Life</h3>
-                <p className="text-sm text-white/70">Behind the scenes</p>
+                <h3 className="text-lg font-semibold text-white">Are You Experienced</h3>
+                <p className="text-sm text-white/70">Hendrix Cover</p>
               </div>
             </div>
           </div>
@@ -178,11 +178,15 @@ export default function VideosPage() {
             Subscribe on YouTube
           </Button>
           <div className="mt-8">
-            <div className="aspect-video rounded-lg border border-white/10 bg-black/50">
-              <p className="flex h-full items-center justify-center text-white/60">
-                YouTube Playlist Embed: "James Pitts Band Live Essentials"
-              </p>
+            <div className="aspect-video rounded-lg border border-white/10 bg-black/50 overflow-hidden mx-auto max-w-4xl">
+              <YouTubeEmbed 
+                videoId="XtsI5PZMqzU" 
+                title="James Pitts Band Live Essentials - Shaky Ground"
+              />
             </div>
+            <p className="mt-4 text-sm text-white/70">
+              Subscribe to our YouTube channel for weekly live drops and behind-the-scenes content.
+            </p>
           </div>
         </div>
       </section>

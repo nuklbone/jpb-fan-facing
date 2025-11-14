@@ -10,6 +10,12 @@ export function SiteFooter() {
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div>
+            <img
+              src="/images/JPB%20LOGOS/PROFILE.jpg"
+              alt="James Pitts Band"
+              className="mb-4 h-12 w-auto"
+              loading="lazy"
+            />
             <h3 className="mb-4 text-lg font-semibold text-white">{SITE_CONFIG.name}</h3>
             <p className="mb-4 text-sm text-white/70">{SITE_CONFIG.tagline}</p>
             <div className="flex gap-4">

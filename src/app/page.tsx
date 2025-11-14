@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { SpotifyEmbed } from "@/components/media/spotify-embed";
+import { YouTubeEmbed } from "@/components/media/youtube-embed";
 
 export const metadata = {
   title: "High-Energy Soul-Blues Shows | The James Pitts Band Official Site",
@@ -72,19 +73,15 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 text-center">
-            <div className="relative aspect-video overflow-hidden rounded-lg border border-white/10 bg-black/50 mx-auto max-w-4xl">
-              <img
-                src="/images/gallery/JPB%20Blues%20Bash%20Dancing.jpg"
-                alt="Floor Goes Wild Reel"
-                className="h-full w-full object-cover opacity-70"
-                loading="lazy"
+            <div className="aspect-video overflow-hidden rounded-lg border border-white/10 bg-black/50 mx-auto max-w-4xl">
+              <YouTubeEmbed
+                videoId="frcMWr1oXzo"
+                title="James Pitts Band - Driving South & Love Me"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-                <p className="text-xl font-semibold text-white">
-                  Video: "Floor Goes Wild" Reel - Your next big night starts here.
-                </p>
-              </div>
             </div>
+            <p className="mt-4 text-lg font-semibold text-white">
+              "Driving South & Love Me" - Your next big night starts here.
+            </p>
           </div>
         </div>
       </section>

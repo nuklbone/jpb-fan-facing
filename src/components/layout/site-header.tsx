@@ -11,8 +11,16 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur">
       <div className="flex w-full items-center justify-between px-6 py-4 lg:px-12">
-            <Link href="/" className="text-lg font-semibold tracking-wide">
-              {SITE_CONFIG.name}
+            <Link href="/" className="flex items-center gap-3">
+              <img
+                src="/images/JPB%20LOGOS/PROFILE.jpg"
+                alt="James Pitts Band"
+                className="h-10 w-auto"
+                loading="eager"
+              />
+              <span className="text-lg font-semibold tracking-wide hidden sm:inline">
+                {SITE_CONFIG.name}
+              </span>
             </Link>
             <nav className="hidden items-center gap-6 text-sm md:flex">
               {NAV_LINKS.map((link) => (
