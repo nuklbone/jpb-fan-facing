@@ -13,8 +13,9 @@ export default function ShowsPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Tour Poster Header */}
-      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
+      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden w-full py-20 px-6 lg:px-12">
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
+        <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20" style={{backgroundImage: "url('/images/shows/James%201%20WBC.jpg')"}} />
         <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Where You Can Catch Us Live
@@ -60,25 +61,46 @@ export default function ShowsPage() {
           <p className="mb-12 text-lg text-white/70">
             Catch a glimpse of the energy we bring to every stage.
           </p>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-lg border border-white/10 bg-black/50 p-6">
-              <div className="aspect-video w-full rounded bg-brand-muted/20"></div>
-              <p className="mt-4 text-white/70">"Shaky Ground" – Live at The Brickyard</p>
-              <p className="text-sm italic text-white/60">"The crowd never stopped moving."</p>
-            </div>
-            <div className="rounded-lg border border-white/10 bg-black/50 p-6">
-              <div className="aspect-video w-full rounded bg-brand-muted/20"></div>
-              <p className="mt-4 text-white/70">"Fishnet" – James Pitts Band at WBS Blues Bash</p>
-              <p className="text-sm italic text-white/60">"Tight, loud, and still perfectly mixed."</p>
-            </div>
-            <div className="rounded-lg border border-white/10 bg-black/50 p-6">
-              <div className="aspect-video w-full rounded bg-brand-muted/20"></div>
-              <p className="mt-4 text-white/70">"Misery" – Live at Oak Hill Music</p>
-              <p className="text-sm italic text-white/60">
-                "For the first time my parents and kids loved the same show."
-              </p>
-            </div>
-          </div>
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div className="rounded-lg border border-white/10 bg-black/50 p-6">
+                  <div className="aspect-video w-full overflow-hidden rounded border border-white/10 bg-black/50">
+                    <img
+                      src="/images/gallery/JPB%20RS%203.jpg"
+                      alt="Shaky Ground Live at The Brickyard"
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="mt-4 text-white/70">"Shaky Ground" – Live at The Brickyard</p>
+                  <p className="text-sm italic text-white/60">"The crowd never stopped moving."</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-black/50 p-6">
+                  <div className="aspect-video w-full overflow-hidden rounded border border-white/10 bg-black/50">
+                    <img
+                      src="/images/gallery/JPB%20Blues%20Bash%20Dancing.jpg"
+                      alt="Fishnet at WBS Blues Bash"
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="mt-4 text-white/70">"Fishnet" – James Pitts Band at WBS Blues Bash</p>
+                  <p className="text-sm italic text-white/60">"Tight, loud, and still perfectly mixed."</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-black/50 p-6">
+                  <div className="aspect-video w-full overflow-hidden rounded border border-white/10 bg-black/50">
+                    <img
+                      src="/images/gallery/JP%20LIve.jpg"
+                      alt="Misery Live at Oak Hill Music"
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="mt-4 text-white/70">"Misery" – Live at Oak Hill Music</p>
+                  <p className="text-sm italic text-white/60">
+                    "For the first time my parents and kids loved the same show."
+                  </p>
+                </div>
+              </div>
         </div>
       </section>
 

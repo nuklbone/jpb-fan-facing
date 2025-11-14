@@ -11,8 +11,9 @@ export default function MusicPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero Introduction */}
-      <section className="border-b border-white/10 bg-black py-16 px-6 lg:px-12">
-        <div className="w-full text-center">
+      <section className="relative border-b border-white/10 bg-black py-16 px-6 lg:px-12 overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-10" style={{backgroundImage: "url('/images/gallery/top%20album%202020.jpg')"}} />
+        <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Dive Into the Sound
           </h1>
@@ -146,10 +147,16 @@ export default function MusicPage() {
               <p className="mb-4 text-white/70">
                 High-energy set curated by Inner Circle ambassadors
               </p>
-              <div className="aspect-video rounded border border-white/10 bg-brand-muted/20">
-                <p className="flex h-full items-center justify-center text-white/60">
-                  Playlist embed placeholder
-                </p>
+              <div className="aspect-video overflow-hidden rounded border border-white/10 bg-black/50">
+                <img
+                  src="/images/gallery/JPB%20Blues%20Bash%20Dancing.jpg"
+                  alt="#JMPBParty Floor Starters Playlist"
+                  className="h-full w-full object-cover opacity-70"
+                  loading="lazy"
+                />
+                <div className="relative -mt-full flex h-full items-center justify-center bg-black/40">
+                  <p className="text-sm text-white/80">Playlist embed</p>
+                </div>
               </div>
               <p className="mt-4 text-sm text-white/60">
                 Follow the playlist on Spotify or Apple Music
@@ -158,10 +165,16 @@ export default function MusicPage() {
             <div className="rounded-lg border border-white/10 bg-black/50 p-6">
               <h3 className="mb-2 text-xl font-semibold text-white">Soul Slow Burn</h3>
               <p className="mb-4 text-white/70">Late-night favorites compiled by fans</p>
-              <div className="aspect-video rounded border border-white/10 bg-brand-muted/20">
-                <p className="flex h-full items-center justify-center text-white/60">
-                  Playlist embed placeholder
-                </p>
+              <div className="aspect-video overflow-hidden rounded border border-white/10 bg-black/50">
+                <img
+                  src="/images/gallery/top%20album%202020.jpg"
+                  alt="Soul Slow Burn Playlist"
+                  className="h-full w-full object-cover opacity-70"
+                  loading="lazy"
+                />
+                <div className="relative -mt-full flex h-full items-center justify-center bg-black/40">
+                  <p className="text-sm text-white/80">Playlist embed</p>
+                </div>
               </div>
               <p className="mt-4 text-sm text-white/60">
                 Follow the playlist on Spotify or Apple Music

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { SpotifyEmbed } from "@/components/media/spotify-embed";
+import { YouTubeEmbed } from "@/components/media/youtube-embed";
 
 export const metadata = {
   title: "The James Pitts Band | Official Bio & Story",
@@ -11,8 +11,9 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero */}
-      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
+      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden w-full py-20 px-6 lg:px-12">
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
+        <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20" style={{backgroundImage: "url('/images/gallery/Classic%20James%20Pitts.jpg')"}} />
         <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Meet the James Pitts Band
@@ -60,10 +61,8 @@ export default function AboutPage() {
             Signature crowd-favorite showing the band's groove-forward set, interactive
             call-and-response, and volume-controlled punch.
           </p>
-          <div className="aspect-video rounded-lg border border-white/10 bg-black/50">
-            <p className="flex h-full items-center justify-center text-white/60">
-              Video embed placeholder - YouTube: Shaky Ground Live at The Brickyard
-            </p>
+          <div className="aspect-video rounded-lg border border-white/10 bg-black/50 overflow-hidden">
+            <YouTubeEmbed videoId="XtsI5PZMqzU" title="Shaky Ground - Live at The Brickyard" />
           </div>
         </div>
       </section>
@@ -111,17 +110,38 @@ export default function AboutPage() {
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
             <div className="text-center">
-              <div className="mb-4 aspect-square rounded-lg border border-white/10 bg-black/50"></div>
+              <div className="mb-4 aspect-square overflow-hidden rounded-lg border border-white/10 bg-black/50">
+                <img
+                  src="/images/band/Classic%20James%20Pitts.jpg"
+                  alt="James Pitts"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
               <h3 className="mb-2 text-xl font-semibold text-white">James Pitts</h3>
               <p className="text-white/70">Guitar, Lead Vocals</p>
             </div>
             <div className="text-center">
-              <div className="mb-4 aspect-square rounded-lg border border-white/10 bg-black/50"></div>
+              <div className="mb-4 aspect-square overflow-hidden rounded-lg border border-white/10 bg-black/50">
+                <img
+                  src="/images/gallery/Troy%201.jpg"
+                  alt="Troy Tolbert"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
               <h3 className="mb-2 text-xl font-semibold text-white">Troy Tolbert</h3>
               <p className="text-white/70">Bass, Backing Vocals</p>
             </div>
             <div className="text-center">
-              <div className="mb-4 aspect-square rounded-lg border border-white/10 bg-black/50"></div>
+              <div className="mb-4 aspect-square overflow-hidden rounded-lg border border-white/10 bg-black/50">
+                <img
+                  src="/images/gallery/Ruben%201.jpg"
+                  alt="Ruben Garza"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
               <h3 className="mb-2 text-xl font-semibold text-white">Ruben Garza</h3>
               <p className="text-white/70">Drums, Percussion</p>
             </div>

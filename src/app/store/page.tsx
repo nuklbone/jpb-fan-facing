@@ -10,8 +10,9 @@ export default function StorePage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero */}
-      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
+      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden w-full py-20 px-6 lg:px-12">
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
+        <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20" style={{backgroundImage: "url('/images/merch/JPB%20TRUE%20BLUES%20PARTY.jpg')"}} />
         <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Rep the Band Your Way
@@ -31,7 +32,14 @@ export default function StorePage() {
                 </span>
                 <span className="text-xs text-white/60">Only 75 left</span>
               </div>
-              <div className="mb-4 aspect-square rounded-lg bg-brand-muted/20"></div>
+              <div className="mb-4 aspect-square overflow-hidden rounded-lg border border-white/10 bg-black/50">
+                <img
+                  src="/images/merch/Promo%201.png"
+                  alt="HutchFest 2025 Limited Tee"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
               <h3 className="mb-2 text-xl font-semibold text-white">
                 HutchFest 2025 Limited Tee
               </h3>
@@ -42,7 +50,14 @@ export default function StorePage() {
               <Button className="w-full">Add to Cart</Button>
             </div>
             <div className="rounded-lg border border-white/10 bg-black/50 p-6">
-              <div className="mb-4 aspect-square rounded-lg bg-brand-muted/20"></div>
+              <div className="mb-4 aspect-square overflow-hidden rounded-lg border border-white/10 bg-black/50">
+                <img
+                  src="/images/gallery/top%20album%202020.jpg"
+                  alt="Shaky Ground Live Vinyl"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
               <h3 className="mb-2 text-xl font-semibold text-white">
                 "Shaky Ground" Live Vinyl
               </h3>
@@ -53,7 +68,14 @@ export default function StorePage() {
               <Button className="w-full">Add to Cart</Button>
             </div>
             <div className="rounded-lg border border-white/10 bg-black/50 p-6">
-              <div className="mb-4 aspect-square rounded-lg bg-brand-muted/20"></div>
+              <div className="mb-4 aspect-square overflow-hidden rounded-lg border border-white/10 bg-black/50">
+                <img
+                  src="/images/merch/Promo%202.jpg"
+                  alt="Inner Circle Badge Hoodie"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
               <h3 className="mb-2 text-xl font-semibold text-white">Inner Circle Badge Hoodie</h3>
               <p className="mb-4 text-white/70">Glow ink logo that pops under stage lights</p>
               <div className="mb-4 text-2xl font-bold text-white">$65</div>
@@ -73,10 +95,22 @@ export default function StorePage() {
             Premium fabrics, true-to-size fits, and designs inspired by stage lighting palettes.
           </p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {["Tees", "Hoodies", "Hats", "Posters"].map((category) => (
-              <div key={category} className="rounded-lg border border-white/10 bg-black/50 p-4">
-                <div className="mb-4 aspect-square rounded-lg bg-brand-muted/20"></div>
-                <h3 className="mb-2 text-lg font-semibold text-white">{category}</h3>
+            {[
+              { name: "Tees", img: "Promo 3.jpg" },
+              { name: "Hoodies", img: "Promo 4.jpg" },
+              { name: "Hats", img: "Promo 5.jpg" },
+              { name: "Posters", img: "JPB 1 Sheet.jpg" },
+            ].map((category) => (
+              <div key={category.name} className="rounded-lg border border-white/10 bg-black/50 p-4">
+                <div className="mb-4 aspect-square overflow-hidden rounded-lg border border-white/10 bg-black/50">
+                  <img
+                    src={`/images/${category.name === "Posters" ? "gallery" : "merch"}/${encodeURIComponent(category.img)}`}
+                    alt={category.name}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-white">{category.name}</h3>
                 <p className="text-sm text-white/70">Starting at $20</p>
               </div>
             ))}

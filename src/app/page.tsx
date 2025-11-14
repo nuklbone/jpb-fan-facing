@@ -72,10 +72,18 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 text-center">
-            <div className="aspect-video rounded-lg border border-white/10 bg-black/50">
-              <p className="flex h-full items-center justify-center text-white/60">
-                Video: "Floor Goes Wild" Reel - Your next big night starts here.
-              </p>
+            <div className="relative aspect-video overflow-hidden rounded-lg border border-white/10 bg-black/50 mx-auto max-w-4xl">
+              <img
+                src="/images/gallery/JPB%20Blues%20Bash%20Dancing.jpg"
+                alt="Floor Goes Wild Reel"
+                className="h-full w-full object-cover opacity-70"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                <p className="text-xl font-semibold text-white">
+                  Video: "Floor Goes Wild" Reel - Your next big night starts here.
+                </p>
+              </div>
             </div>
           </div>
         </div>

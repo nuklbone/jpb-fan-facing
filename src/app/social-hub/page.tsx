@@ -6,9 +6,10 @@ export default function SocialHubPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero Intro */}
-      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 py-20">
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
+      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden w-full py-20 px-6 lg:px-12">
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
+        <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20" style={{backgroundImage: "url('/images/gallery/Audience%202.jpg')"}} />
+        <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Join the Ongoing Party
           </h1>
@@ -24,18 +25,25 @@ export default function SocialHubPage() {
       </section>
 
       {/* Live Social Feed Wall */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black w-full py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">
             What's Happening Right Now
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {Array.from({ length: 9 }).map((_, i) => (
+            {[
+              "Dance 1.jpg", "Dance 2.jpg", "Dance 3.jpg", 
+              "Dance 4.jpg", "Dance 5.jpg", "Dance 6.jpg",
+              "Dance 7.jpg", "Audience.jpg", "Audience 2.jpg"
+            ].map((img, i) => (
               <div key={i} className="rounded-lg border border-white/10 bg-black/50 p-4">
-                <div className="mb-4 aspect-square rounded-lg bg-brand-muted/20">
-                  <p className="flex h-full items-center justify-center text-xs text-white/60">
-                    Social Post {i + 1}
-                  </p>
+                <div className="mb-4 aspect-square overflow-hidden rounded-lg border border-white/10 bg-black/50">
+                  <img
+                    src={`/images/gallery/${encodeURIComponent(img)}`}
+                    alt={`Social post ${i + 1}`}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="flex items-center gap-2 text-xs text-white/70">
                   <span className="font-semibold">@FanHandle</span>
@@ -55,8 +63,8 @@ export default function SocialHubPage() {
       </section>
 
       {/* Top Fan Content of the Week */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black w-full py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-center text-3xl font-bold text-white md:text-4xl">
             Spotlight: You
           </h2>
@@ -66,16 +74,19 @@ export default function SocialHubPage() {
           </p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { type: "Dance Floor Clip", credit: "@BeatsByCee" },
-              { type: "Merch Fit", credit: "@SoulfulShutter" },
-              { type: "Fan Art", credit: "@ArtFan2025" },
-              { type: "Tour Photo", credit: "@RoadTripper" },
+              { type: "Dance Floor Clip", credit: "@BeatsByCee", img: "Dance 1.jpg" },
+              { type: "Merch Fit", credit: "@SoulfulShutter", img: "Promo 2.jpg" },
+              { type: "Fan Art", credit: "@ArtFan2025", img: "JPB 1 Sheet.jpg" },
+              { type: "Tour Photo", credit: "@RoadTripper", img: "JPB RS.jpg" },
             ].map((feature, i) => (
               <div key={i} className="rounded-lg border border-white/10 bg-black/50 p-4">
-                <div className="mb-4 aspect-video rounded-lg bg-brand-muted/20">
-                  <p className="flex h-full items-center justify-center text-xs text-white/60">
-                    {feature.type}
-                  </p>
+                <div className="mb-4 aspect-video overflow-hidden rounded-lg border border-white/10 bg-black/50">
+                  <img
+                    src={`/images/${feature.type === "Merch Fit" ? "merch" : feature.type === "Fan Art" ? "gallery" : feature.type === "Tour Photo" ? "shows" : "gallery"}/${encodeURIComponent(feature.img)}`}
+                    alt={feature.type}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
                 <p className="mb-2 text-sm font-semibold text-white">This Week's Best</p>
                 <p className="text-xs text-white/70">Credit: {feature.credit}</p>
@@ -86,8 +97,8 @@ export default function SocialHubPage() {
       </section>
 
       {/* Share Your Love CTA */}
-      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl text-center">
+      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black w-full py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Share Your Love</h2>
           <p className="mb-8 text-lg text-white/70">
             Tag #JMPBParty, mention @JamesPittsBand, or upload through the submission form to join
@@ -105,8 +116,8 @@ export default function SocialHubPage() {
       </section>
 
       {/* Community Guidelines */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-black w-full py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="mb-8 text-center text-3xl font-bold text-white md:text-4xl">
             Keep It Vibe-Positive
           </h2>

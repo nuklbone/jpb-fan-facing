@@ -10,8 +10,9 @@ export default function TicketsPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero */}
-      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
+      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden w-full py-20 px-6 lg:px-12">
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
+        <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20" style={{backgroundImage: "url('/images/gallery/Lights.jpg')"}} />
         <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Upgrade Your Night

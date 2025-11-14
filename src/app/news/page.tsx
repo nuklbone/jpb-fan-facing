@@ -11,8 +11,9 @@ export default function NewsPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero Intro */}
-      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
+      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden w-full py-20 px-6 lg:px-12">
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
+        <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20" style={{backgroundImage: "url('/images/gallery/JPB%20Blues%20Bash%20Dancing.jpg')"}} />
         <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Stay in the Loop
@@ -76,10 +77,13 @@ export default function NewsPage() {
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">You Rocked This</h2>
           <div className="grid gap-8 md:grid-cols-2">
             <article className="rounded-lg border border-white/10 bg-black/50 p-6">
-              <div className="mb-4 aspect-video rounded-lg bg-brand-muted/20">
-                <p className="flex h-full items-center justify-center text-white/60">
-                  Fan Spotlight Image
-                </p>
+              <div className="mb-4 aspect-video overflow-hidden rounded-lg border border-white/10 bg-black/50">
+                <img
+                  src="/images/gallery/Audience.jpg"
+                  alt="Fan Spotlight"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
               </div>
               <h3 className="mb-2 text-xl font-semibold text-white">Fan of the Month</h3>
               <p className="mb-4 text-white/70">
@@ -90,10 +94,13 @@ export default function NewsPage() {
               </Button>
             </article>
             <article className="rounded-lg border border-white/10 bg-black/50 p-6">
-              <div className="mb-4 aspect-video rounded-lg bg-brand-muted/20">
-                <p className="flex h-full items-center justify-center text-white/60">
-                  #JMPBParty Gallery
-                </p>
+              <div className="mb-4 aspect-video overflow-hidden rounded-lg border border-white/10 bg-black/50">
+                <img
+                  src="/images/gallery/Dance%201.jpg"
+                  alt="#JMPBParty Gallery"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
               </div>
               <h3 className="mb-2 text-xl font-semibold text-white">#JMPBParty Highlights</h3>
               <p className="mb-4 text-white/70">
@@ -124,10 +131,13 @@ export default function NewsPage() {
                 key={i}
                 className="rounded-lg border border-white/10 bg-black/50 p-6 md:flex md:gap-6"
               >
-                <div className="mb-4 aspect-video w-full rounded-lg bg-brand-muted/20 md:mb-0 md:w-1/3">
-                  <p className="flex h-full items-center justify-center text-white/60">
-                    Diary Image/Video
-                  </p>
+                <div className="mb-4 aspect-video w-full overflow-hidden rounded-lg border border-white/10 bg-black/50 md:mb-0 md:w-1/3">
+                  <img
+                    src={`/images/gallery/${i === 1 ? "Gig Time.jpg" : "JPB Bike Week.jpg"}`}
+                    alt="Tour Diary"
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="md:w-2/3">
                   <div className="mb-2 text-sm text-white/60">March {i}, 2025</div>
