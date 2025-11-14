@@ -72,7 +72,6 @@ export default function VideosPage() {
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">Feel the Crowd</h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div>
-              <div>
               <div className="mb-4 rounded-lg border border-white/10 bg-black/50 overflow-hidden">
                 <YouTubeEmbed videoId="XtsI5PZMqzU" title="Shaky Ground - Live at The Brickyard" />
               </div>
