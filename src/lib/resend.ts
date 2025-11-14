@@ -1,7 +1,8 @@
 import { Resend } from "resend";
 import { env } from "@/lib/env";
 
-export const resend = new Resend(env.resendApiKey);
+// Initialize Resend only if API key exists (prevents build errors)
+export const resend = env.resendApiKey ? new Resend(env.resendApiKey) : null;
 
 export async function sendEmail(options: {
   to: string | string[];
@@ -9,6 +10,11 @@ export async function sendEmail(options: {
   html: string;
   from?: string;
 }) {
+  if (!resend) {
+    console.warn("Resend API key not configured. Email not sent.");
+    return { id: "skipped" };
+  }
+
   const { to, subject, html, from } = options;
 
   const response = await resend.emails.send({

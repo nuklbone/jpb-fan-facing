@@ -1,15 +1,21 @@
 import { env } from "@/lib/env";
 import type { ShopifyProduct } from "@/types/shopify";
 
-const BASE_URL = `https://${env.shopifyStoreDomain}`;
-const ADMIN_API_VERSION = env.shopifyStorefrontApiVersion;
+// Only set up Shopify if credentials exist (prevents build errors)
+const BASE_URL = env.shopifyStoreDomain ? `https://${env.shopifyStoreDomain}` : "https://placeholder.myshopify.com";
+const ADMIN_API_VERSION = env.shopifyStorefrontApiVersion || "2024-01";
 
 const adminHeaders = {
-  "X-Shopify-Access-Token": env.shopifyAdminToken,
+  "X-Shopify-Access-Token": env.shopifyAdminToken || "placeholder-token",
   "Content-Type": "application/json",
 } as const;
 
 export async function getProducts(): Promise<ShopifyProduct[]> {
+  if (!env.shopifyStoreDomain || !env.shopifyAdminToken) {
+    console.warn("Shopify not configured. Returning empty products array.");
+    return [];
+  }
+
   const response = await fetch(
     `${BASE_URL}/admin/api/${ADMIN_API_VERSION}/products.json`,
     {
@@ -32,6 +38,11 @@ export async function getProduct(handle: string): Promise<ShopifyProduct | null>
 }
 
 export async function getCollections() {
+  if (!env.shopifyStoreDomain || !env.shopifyAdminToken) {
+    console.warn("Shopify not configured. Returning empty collections array.");
+    return [];
+  }
+
   const response = await fetch(
     `${BASE_URL}/admin/api/${ADMIN_API_VERSION}/collections.json`,
     {

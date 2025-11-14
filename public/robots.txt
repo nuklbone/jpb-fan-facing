@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow API routes
+Disallow: /api/
+
+# Disallow admin/internal routes (if any)
+# Disallow: /admin/
+
+# Sitemap
+Sitemap: https://jamespittsband.com/sitemap.xml
+
