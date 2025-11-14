@@ -73,7 +73,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 text-center">
-            <div className="aspect-video overflow-hidden rounded-lg border border-white/10 bg-black/50 mx-auto max-w-4xl">
+            <div className="overflow-hidden rounded-lg border border-white/10 bg-black/50 mx-auto max-w-4xl">
               <YouTubeEmbed
                 videoId="frcMWr1oXzo"
                 title="James Pitts Band - Driving South & Love Me"

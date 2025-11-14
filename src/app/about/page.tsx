@@ -61,7 +61,7 @@ export default function AboutPage() {
             Signature crowd-favorite showing the band's groove-forward set, interactive
             call-and-response, and volume-controlled punch.
           </p>
-          <div className="aspect-video rounded-lg border border-white/10 bg-black/50 overflow-hidden">
+          <div className="rounded-lg border border-white/10 bg-black/50 overflow-hidden">
             <YouTubeEmbed videoId="XtsI5PZMqzU" title="Shaky Ground - Live at The Brickyard" />
           </div>
         </div>
