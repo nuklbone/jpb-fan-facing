@@ -44,9 +44,9 @@ export default function JoinPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero & Incentive */}
-      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden px-4 py-20">
+      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
+        <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Join the Inner Circle Crew
           </h1>
@@ -66,8 +66,8 @@ export default function JoinPage() {
       </section>
 
       {/* Benefits Snapshot */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">What You Get</h2>
           </div>
@@ -98,8 +98,8 @@ export default function JoinPage() {
       </section>
 
       {/* Tier Comparison */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-12 text-center text-3xl font-bold text-white md:text-4xl">
             Choose Your Circle
           </h2>
@@ -195,8 +195,8 @@ export default function JoinPage() {
       </section>
 
       {/* Opt-In Form */}
-      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <div className="mb-8 text-center">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Get Started</h2>
             <p className="text-lg text-white/70">
@@ -216,7 +216,7 @@ export default function JoinPage() {
                     name="firstName"
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                    className="w-full rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
+                    className="w-full rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
                     placeholder="Your name"
                   />
                 </div>
@@ -231,7 +231,7 @@ export default function JoinPage() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
+                    className="w-full rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -246,7 +246,7 @@ export default function JoinPage() {
                   name="zip"
                   value={formData.zip}
                   onChange={(e) => setFormData({ ...formData, zip: e.target.value })}
-                  className="w-full rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
+                  className="w-full rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
                   placeholder="12345"
                 />
               </div>
@@ -286,8 +286,8 @@ export default function JoinPage() {
       </section>
 
       {/* Exclusive Preview */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl text-center">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Exclusive Preview</h2>
           <p className="mb-8 text-lg text-white/70">
             Members get access to unreleased soundcheck videos and annotated setlists
@@ -303,8 +303,8 @@ export default function JoinPage() {
       </section>
 
       {/* Compliance & Trust */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl text-center text-sm text-white/70">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto text-center text-sm text-white/70">
           <p className="mb-4">
             We respect your data—only the band and our fan engine see it. One click to opt out
             anytime, though we'll miss you.
@@ -320,3 +320,4 @@ export default function JoinPage() {
     </main>
   );
 }
+

@@ -11,9 +11,9 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero */}
-      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden px-4 py-20">
+      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
+        <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Meet the James Pitts Band
           </h1>
@@ -21,8 +21,8 @@ export default function AboutPage() {
       </section>
 
       {/* 150-Word Bio */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <div className="prose prose-invert max-w-none space-y-6 text-lg text-white/80">
             <p>
               The James Pitts Band is a soul-blues power trio that treats every room like a headliner
@@ -48,8 +48,8 @@ export default function AboutPage() {
       </section>
 
       {/* Embedded Performance Clip */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="mb-6 text-center text-3xl font-bold text-white md:text-4xl">
             Signature Performance
           </h2>
@@ -69,8 +69,8 @@ export default function AboutPage() {
       </section>
 
       {/* Milestone Timeline */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="mb-8 text-center text-3xl font-bold text-white md:text-4xl">
             Key Milestones
           </h2>
@@ -104,8 +104,8 @@ export default function AboutPage() {
       </section>
 
       {/* Band Member Credits */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="mb-8 text-center text-3xl font-bold text-white md:text-4xl">
             Meet the Band
           </h2>
@@ -135,8 +135,8 @@ export default function AboutPage() {
       </section>
 
       {/* Fan & Media Praise */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="mb-8 text-center text-3xl font-bold text-white md:text-4xl">
             What People Are Saying
           </h2>
@@ -158,8 +158,8 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl text-center">
+      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
             Ready to Experience the Energy?
           </h2>
@@ -174,3 +174,4 @@ export default function AboutPage() {
     </main>
   );
 }
+

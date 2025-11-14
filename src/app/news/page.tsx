@@ -11,9 +11,9 @@ export default function NewsPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero Intro */}
-      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 py-20">
+      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
+        <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Stay in the Loop
           </h1>
@@ -25,8 +25,8 @@ export default function NewsPage() {
       </section>
 
       {/* Latest Announcements */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">Hot Off the Stage</h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
@@ -71,8 +71,8 @@ export default function NewsPage() {
       </section>
 
       {/* Fan Spotlights */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">You Rocked This</h2>
           <div className="grid gap-8 md:grid-cols-2">
             <article className="rounded-lg border border-white/10 bg-black/50 p-6">
@@ -111,8 +111,8 @@ export default function NewsPage() {
       </section>
 
       {/* Behind-the-Scenes Posts */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Road & Studio Diaries</h2>
           <p className="mb-8 text-lg text-white/70">
             Weekly entries from the van, rehearsal room stories, lighting design breakdowns, and
@@ -149,8 +149,8 @@ export default function NewsPage() {
       </section>
 
       {/* Merch & Release Drop Alerts */}
-      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl text-center">
+      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Next Drop Incoming</h2>
           <p className="mb-8 text-lg text-white/70">
             Tease limited-run merch, presave links, and livestream premiere details with countdown
@@ -173,8 +173,8 @@ export default function NewsPage() {
       </section>
 
       {/* Archive & Search */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-center text-3xl font-bold text-white md:text-4xl">
             Archive & Search
           </h2>
@@ -186,19 +186,19 @@ export default function NewsPage() {
             <input
               type="search"
               placeholder="Search news, stories, announcements..."
-              className="w-full max-w-md rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none sm:w-auto"
+              className="w-full max-w-md rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none sm:w-auto"
             />
             <div className="flex gap-2">
-              <button className="rounded-full border border-white/20 px-4 py-2 text-sm text-white hover:border-brand hover:bg-white/5">
+              <button className="rounded-full border border-white/20 px-6 lg:px-12 py-2 text-sm text-white hover:border-brand hover:bg-white/5">
                 All
               </button>
-              <button className="rounded-full border border-white/20 px-4 py-2 text-sm text-white hover:border-brand hover:bg-white/5">
+              <button className="rounded-full border border-white/20 px-6 lg:px-12 py-2 text-sm text-white hover:border-brand hover:bg-white/5">
                 Tour
               </button>
-              <button className="rounded-full border border-white/20 px-4 py-2 text-sm text-white hover:border-brand hover:bg-white/5">
+              <button className="rounded-full border border-white/20 px-6 lg:px-12 py-2 text-sm text-white hover:border-brand hover:bg-white/5">
                 Releases
               </button>
-              <button className="rounded-full border border-white/20 px-4 py-2 text-sm text-white hover:border-brand hover:bg-white/5">
+              <button className="rounded-full border border-white/20 px-6 lg:px-12 py-2 text-sm text-white hover:border-brand hover:bg-white/5">
                 Events
               </button>
             </div>
@@ -208,3 +208,4 @@ export default function NewsPage() {
     </main>
   );
 }
+

@@ -58,9 +58,9 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero */}
-      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden px-4 py-20">
+      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
+        <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Stay in Touch with the James Pitts Band Crew
           </h1>
@@ -72,8 +72,8 @@ export default function ContactPage() {
       </section>
 
       {/* Fan Mail Form */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="mb-8 text-center text-3xl font-bold text-white md:text-4xl">Fan Mail</h2>
           <form onSubmit={handleSubmit} className="rounded-lg border border-white/10 bg-black/50 p-8">
             <div className="space-y-4">
@@ -88,7 +88,7 @@ export default function ContactPage() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
+                  className="w-full rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
                   placeholder="Your name"
                 />
               </div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
+                  className="w-full rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
                   placeholder="your@email.com"
                 />
               </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
                   name="topic"
                   value={formData.topic}
                   onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
-                  className="w-full rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white focus:border-brand focus:outline-none"
+                  className="w-full rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white focus:border-brand focus:outline-none"
                 >
                   <option value="just-saying-hi">Just Saying Hi</option>
                   <option value="song-request">Song Request</option>
@@ -135,7 +135,7 @@ export default function ContactPage() {
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
+                  className="w-full rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
                   placeholder="Tell us what's on your mind..."
                 />
               </div>
@@ -163,8 +163,8 @@ export default function ContactPage() {
       </section>
 
       {/* Bring Us to Your Town */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="mb-4 text-center text-3xl font-bold text-white md:text-4xl">
             Want Us in Your City?
           </h2>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                     onChange={(e) =>
                       setCityFormData({ ...cityFormData, cityName: e.target.value })
                     }
-                    className="w-full rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
+                    className="w-full rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
                     placeholder="Your name"
                   />
                 </div>
@@ -254,7 +254,7 @@ export default function ContactPage() {
                     onChange={(e) =>
                       setCityFormData({ ...cityFormData, email: e.target.value })
                     }
-                    className="w-full rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
+                    className="w-full rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -272,7 +272,7 @@ export default function ContactPage() {
                   onChange={(e) =>
                     setCityFormData({ ...cityFormData, city: e.target.value })
                   }
-                  className="w-full rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
+                  className="w-full rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
                   placeholder="City, State"
                 />
               </div>
@@ -288,7 +288,7 @@ export default function ContactPage() {
                   onChange={(e) =>
                     setCityFormData({ ...cityFormData, venue: e.target.value })
                   }
-                  className="w-full rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
+                  className="w-full rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
                   placeholder="Venue name or festival"
                 />
               </div>
@@ -304,7 +304,7 @@ export default function ContactPage() {
                   onChange={(e) =>
                     setCityFormData({ ...cityFormData, why: e.target.value })
                   }
-                  className="w-full rounded-md border border-white/10 bg-black/50 px-4 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
+                  className="w-full rounded-md border border-white/10 bg-black/50 px-6 lg:px-12 py-2 text-white placeholder:text-white/40 focus:border-brand focus:outline-none"
                   placeholder="Tell us why your city is ready for the James Pitts Band..."
                 />
               </div>
@@ -328,8 +328,8 @@ export default function ContactPage() {
       </section>
 
       {/* Fan Club & Merch Support */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="mb-4 text-center text-3xl font-bold text-white md:text-4xl">
             Need Help with Your Inner Circle Perks?
           </h2>
@@ -355,8 +355,8 @@ export default function ContactPage() {
       </section>
 
       {/* Press Corner */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl text-center">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
             Storytellers & Press
           </h2>
@@ -380,8 +380,8 @@ export default function ContactPage() {
       </section>
 
       {/* Stay Connected */}
-      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl text-center">
+      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Stay Connected</h2>
           <p className="mb-8 text-lg text-white/70">
             Tag @JamesPittsBand or #JMPBParty so we can share your moments on the social wall.
@@ -405,3 +405,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

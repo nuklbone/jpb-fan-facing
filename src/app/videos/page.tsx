@@ -11,9 +11,9 @@ export default function VideosPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero Intro */}
-      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden px-4 py-20">
+      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
+        <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Press Play on the Soul-Blues Party
           </h1>
@@ -22,7 +22,7 @@ export default function VideosPage() {
             festival stages into packed dance floors, then go behind the curtain to see how the
             groove gets built.
           </p>
-          <div className="mx-auto max-w-4xl">
+          <div className="max-w-4xl mx-auto">
             <div className="aspect-video rounded-lg border border-white/10 bg-black/50 overflow-hidden">
               <YouTubeEmbed 
                 videoId="XtsI5PZMqzU" 
@@ -39,8 +39,8 @@ export default function VideosPage() {
       </section>
 
       {/* Music Video Gallery */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Official Videos</h2>
           <p className="mb-8 text-lg text-white/70">
             Curated playlists by era—studio stories, narrative videos, and visualizers for each
@@ -67,8 +67,8 @@ export default function VideosPage() {
       </section>
 
       {/* Live Performance Highlight Reels */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">Feel the Crowd</h2>
           <div className="grid gap-8 md:grid-cols-3">
             <div>
@@ -104,8 +104,8 @@ export default function VideosPage() {
       </section>
 
       {/* Behind the Scenes */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
             Life on the Road & In the Studio
           </h2>
@@ -137,8 +137,8 @@ export default function VideosPage() {
       </section>
 
       {/* Fan Submissions */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">You Shot This!</h2>
           <p className="mb-8 text-lg text-white/70">
             Tag #JMPBParty or upload via the submission form to get featured on the next rotation.
@@ -165,8 +165,8 @@ export default function VideosPage() {
       </section>
 
       {/* Subscribe CTA */}
-      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl text-center">
+      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
             Subscribe for Weekly Drops
           </h2>
@@ -189,3 +189,4 @@ export default function VideosPage() {
     </main>
   );
 }
+

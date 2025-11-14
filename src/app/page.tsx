@@ -11,16 +11,16 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-black via-black to-brand-muted">
       {/* Hero Panel */}
-      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden px-4 py-20">
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
-        <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20" style={{backgroundImage: "url('/images/gallery/Barnful%20of%20Blues.jpg')"}} />
-        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
+          <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden w-full py-20">
+            <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
+            <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20" style={{backgroundImage: "url('/images/gallery/Barnful%20of%20Blues.jpg')"}} />
+            <div className="relative z-10 w-full text-center px-6 lg:px-12">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
             Soul-blues engineered for packed dance floors and unforgettable nights.
           </h1>
-          <p className="mb-8 text-xl text-white/80 md:text-2xl">
-            HutchFest heroes, Granite State champions, your new favorite live show.
-          </p>
+              <p className="mb-8 text-xl text-white/80 md:text-2xl max-w-3xl mx-auto">
+                HutchFest heroes, Granite State champions, your new favorite live show.
+              </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button size="lg" href="/shows" className="text-lg">
               See Upcoming Shows
@@ -33,8 +33,8 @@ export default function Home() {
       </section>
 
       {/* Hooked in 20 Seconds */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black w-full py-16 px-6 lg:px-12">
+        <div className="w-full">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
               What you'll experience
@@ -82,8 +82,8 @@ export default function Home() {
       </section>
 
       {/* Fan Credibility Wall */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black w-full py-16 px-6 lg:px-12">
+        <div className="w-full">
           <div className="mb-8 text-center">
             <p className="mb-4 text-sm uppercase tracking-wider text-white/60">
               Blues Beat Magazine "Virtuoso Ignites Hutchinson" • 5× Blues Tone Award Winner •
@@ -114,8 +114,8 @@ export default function Home() {
       </section>
 
       {/* The Sound & The Vibe */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black w-full py-16 px-6 lg:px-12">
+        <div className="w-full">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
               The Sound & The Vibe
@@ -160,8 +160,8 @@ export default function Home() {
       </section>
 
       {/* Upcoming Shows Snapshot */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black w-full py-16 px-6 lg:px-12">
+        <div className="w-full">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
               Upcoming Shows
@@ -208,8 +208,8 @@ export default function Home() {
       </section>
 
       {/* Fan Funnel Entry */}
-      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <div className="mb-8 text-center">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
               Join the Inner Circle Crew
@@ -272,3 +272,4 @@ export default function Home() {
     </main>
   );
 }
+

@@ -13,9 +13,9 @@ export default function ShowsPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Tour Poster Header */}
-      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden px-4 py-20">
+      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
+        <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Where You Can Catch Us Live
           </h1>
@@ -27,21 +27,21 @@ export default function ShowsPage() {
       </section>
 
       {/* Upcoming Shows Calendar */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <h2 className="text-3xl font-bold text-white md:text-4xl">Upcoming Shows</h2>
             <div className="flex flex-wrap gap-2 text-sm">
-              <button className="rounded-full border border-white/20 px-4 py-2 text-white hover:border-brand hover:bg-white/5">
+              <button className="rounded-full border border-white/20 px-6 lg:px-12 py-2 text-white hover:border-brand hover:bg-white/5">
                 All Shows
               </button>
-              <button className="rounded-full border border-white/20 px-4 py-2 text-white hover:border-brand hover:bg-white/5">
+              <button className="rounded-full border border-white/20 px-6 lg:px-12 py-2 text-white hover:border-brand hover:bg-white/5">
                 Near Me
               </button>
-              <button className="rounded-full border border-white/20 px-4 py-2 text-white hover:border-brand hover:bg-white/5">
+              <button className="rounded-full border border-white/20 px-6 lg:px-12 py-2 text-white hover:border-brand hover:bg-white/5">
                 VIP Events
               </button>
-              <button className="rounded-full border border-white/20 px-4 py-2 text-white hover:border-brand hover:bg-white/5">
+              <button className="rounded-full border border-white/20 px-6 lg:px-12 py-2 text-white hover:border-brand hover:bg-white/5">
                 Past Shows
               </button>
             </div>
@@ -54,8 +54,8 @@ export default function ShowsPage() {
       </section>
 
       {/* Live Show Sampler */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl text-center">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Feel the Room</h2>
           <p className="mb-12 text-lg text-white/70">
             Catch a glimpse of the energy we bring to every stage.
@@ -83,7 +83,7 @@ export default function ShowsPage() {
       </section>
 
       {/* Tour Notification CTA */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
         <div className="mx-auto w-full max-w-3xl text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Don't Miss the Next Drop</h2>
           <p className="mb-8 text-lg text-white/70">
@@ -109,8 +109,8 @@ export default function ShowsPage() {
       </section>
 
       {/* FAQ Highlights */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-center text-3xl font-bold text-white md:text-4xl">FAQs</h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-lg border border-white/10 bg-black/50 p-6">
@@ -143,3 +143,4 @@ export default function ShowsPage() {
     </main>
   );
 }
+

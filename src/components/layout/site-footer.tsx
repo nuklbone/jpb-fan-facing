@@ -5,8 +5,8 @@ export function SiteFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 bg-black px-4 py-12">
-      <div className="mx-auto w-full max-w-6xl">
+    <footer className="border-t border-white/10 bg-black px-6 py-12 lg:px-12">
+      <div className="w-full">
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div>

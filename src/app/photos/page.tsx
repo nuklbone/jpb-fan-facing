@@ -61,9 +61,9 @@ export default function PhotosPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero Intro */}
-      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 py-20">
+      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
+        <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             See the Night in Pictures
           </h1>
@@ -76,8 +76,8 @@ export default function PhotosPage() {
       </section>
 
       {/* Live Action Shots */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">On Stage</h2>
           <p className="mb-8 text-lg text-white/70">
             High-energy frames capturing solos, call-and-response moments, and the exact second the
@@ -106,8 +106,8 @@ export default function PhotosPage() {
       </section>
 
       {/* Fan Gallery */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">You Shot This</h2>
           <p className="mb-8 text-lg text-white/70">
             Spotlighting fan-submitted photos and Polaroids from the rail. We rotate new images
@@ -136,8 +136,8 @@ export default function PhotosPage() {
       </section>
 
       {/* Behind the Scenes */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">Offstage Moments</h2>
           <p className="mb-8 text-lg text-white/70">
             Rehearsal snapshots, van life candids, crew shoutouts, and lighting design previews that
@@ -162,8 +162,8 @@ export default function PhotosPage() {
       </section>
 
       {/* Posters & Artwork */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">
             Era Posters & Album Art
           </h2>
@@ -205,8 +205,8 @@ export default function PhotosPage() {
       </section>
 
       {/* Photo Submission CTA */}
-      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl text-center">
+      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
             Want Your Shot Featured?
           </h2>
@@ -226,3 +226,4 @@ export default function PhotosPage() {
     </main>
   );
 }
+

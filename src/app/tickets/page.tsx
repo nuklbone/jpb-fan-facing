@@ -10,9 +10,9 @@ export default function TicketsPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero */}
-      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden px-4 py-20">
+      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
+        <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Upgrade Your Night
           </h1>
@@ -23,8 +23,8 @@ export default function TicketsPage() {
       </section>
 
       {/* Ticket Availability Overview */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">
             Upcoming Shows
           </h2>
@@ -60,8 +60,8 @@ export default function TicketsPage() {
       </section>
 
       {/* VIP Package Tiers */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-center text-3xl font-bold text-white md:text-4xl">
             Pick Your Backstage Pass
           </h2>
@@ -148,8 +148,8 @@ export default function TicketsPage() {
       </section>
 
       {/* Fan Testimonials */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="mb-8 text-center text-3xl font-bold text-white md:text-4xl">
             Worth Every Penny
           </h2>
@@ -177,8 +177,8 @@ export default function TicketsPage() {
       </section>
 
       {/* FAQ & What to Expect */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="mb-8 text-center text-3xl font-bold text-white md:text-4xl">
             FAQ & What to Expect
           </h2>
@@ -220,8 +220,8 @@ export default function TicketsPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl text-center">
+      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Ready to Upgrade?</h2>
           <p className="mb-8 text-lg text-white/70">
             Planning a celebration or group VIP? We can customize packages for your crew.
@@ -239,3 +239,4 @@ export default function TicketsPage() {
     </main>
   );
 }
+

@@ -10,9 +10,9 @@ export default function StorePage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero */}
-      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 py-20">
+      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden py-20 px-6 lg:px-12">
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand/20 via-brand/10 to-black" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
+        <div className="relative z-10 w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Rep the Band Your Way
           </h1>
@@ -20,8 +20,8 @@ export default function StorePage() {
       </section>
 
       {/* Featured Drops */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">Fresh Off the Press</h2>
           <div className="grid gap-8 md:grid-cols-3">
             <div className="rounded-lg border-2 border-accent bg-black/50 p-6">
@@ -66,8 +66,8 @@ export default function StorePage() {
       </section>
 
       {/* Core Collection */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Everyday Favorites</h2>
           <p className="mb-8 text-lg text-white/70">
             Premium fabrics, true-to-size fits, and designs inspired by stage lighting palettes.
@@ -85,8 +85,8 @@ export default function StorePage() {
       </section>
 
       {/* Fan-Favorite Bundles */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">Bundle & Save</h2>
           <div className="grid gap-8 md:grid-cols-3">
             <div className="rounded-lg border border-white/10 bg-black/50 p-6">
@@ -130,8 +130,8 @@ export default function StorePage() {
       </section>
 
       {/* Inner Circle Exclusives */}
-      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-t border-white/10 bg-gradient-to-b from-brand-muted/20 to-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
             For the Inner Circle Only
           </h2>
@@ -156,8 +156,8 @@ export default function StorePage() {
       </section>
 
       {/* Size Guide & Reviews */}
-      <section className="border-t border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl">
+      <section className="border-t border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="mb-8 text-center text-3xl font-bold text-white md:text-4xl">
             Fit & Fan Love
           </h2>
@@ -188,3 +188,4 @@ export default function StorePage() {
     </main>
   );
 }
+

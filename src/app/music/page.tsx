@@ -11,8 +11,8 @@ export default function MusicPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero Introduction */}
-      <section className="border-b border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl text-center">
+      <section className="border-b border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Dive Into the Sound
           </h1>
@@ -28,8 +28,8 @@ export default function MusicPage() {
       </section>
 
       {/* Featured Songs Block */}
-      <section className="border-b border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-b border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
               Start with These Crowd Favorites
@@ -68,8 +68,8 @@ export default function MusicPage() {
       </section>
 
       {/* Album & EP Showcase */}
-      <section className="border-b border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-b border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <div className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Albums & EPs</h2>
             <p className="text-lg text-white/70">
@@ -110,8 +110,8 @@ export default function MusicPage() {
       </section>
 
       {/* Live & Alternate Versions */}
-      <section className="border-b border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-b border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Only at the Show</h2>
           <p className="mb-8 text-lg text-white/70">
             Unlock unreleased board mixes, acoustic rehearsal takes, and livestream recordings
@@ -135,8 +135,8 @@ export default function MusicPage() {
       </section>
 
       {/* Fan-Curated Playlists */}
-      <section className="border-b border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="border-b border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full">
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">Fans Made These</h2>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-lg border border-white/10 bg-black/50 p-6">
@@ -172,8 +172,8 @@ export default function MusicPage() {
       </section>
 
       {/* Stream Everywhere CTA */}
-      <section className="border-b border-white/10 bg-black px-4 py-16">
-        <div className="mx-auto w-full max-w-4xl text-center">
+      <section className="border-b border-white/10 bg-black py-16 px-6 lg:px-12">
+        <div className="w-full max-w-4xl mx-auto text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Stream Everywhere</h2>
           <p className="mb-8 text-lg text-white/70">
             Add the James Pitts Band to your daily mix and help fuel the next release.
@@ -200,3 +200,4 @@ export default function MusicPage() {
     </main>
   );
 }
+
