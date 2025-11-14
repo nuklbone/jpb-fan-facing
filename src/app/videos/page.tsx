@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { YouTubeEmbed } from "@/components/media/youtube-embed";
 
 export const metadata = {
   title: "Watch the James Pitts Band | Live Videos, Sessions & BTS",
@@ -22,13 +23,17 @@ export default function VideosPage() {
             groove gets built.
           </p>
           <div className="mx-auto max-w-4xl">
-            <div className="aspect-video rounded-lg border border-white/10 bg-black/50">
-              <p className="flex h-full items-center justify-center text-white/60">
-                Feature Video: "Shaky Ground" - Live at The Brickyard (Wichita Blues Bash)
-                <br />
-                Feel the floor shake before you grab tickets.
-              </p>
+            <div className="aspect-video rounded-lg border border-white/10 bg-black/50 overflow-hidden">
+              <YouTubeEmbed 
+                videoId="XtsI5PZMqzU" 
+                title="Shaky Ground - Live at The Brickyard (Wichita Blues Bash 2021)"
+              />
             </div>
+            <p className="mt-4 text-lg text-white/80">
+              "Shaky Ground" – Live at The Brickyard (Wichita Blues Bash 2021)
+              <br />
+              <span className="text-sm text-white/60">Feel the floor shake before you grab tickets.</span>
+            </p>
           </div>
         </div>
       </section>
@@ -42,16 +47,18 @@ export default function VideosPage() {
             release. Tap an era card to unlock the full set.
           </p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="rounded-lg border border-white/10 bg-black/50">
-                <div className="aspect-video rounded-t-lg bg-brand-muted/20">
-                  <p className="flex h-full items-center justify-center text-white/60">
-                    Music Video {i}
-                  </p>
+            {[
+              { id: "CpNWb4mFong", title: "Rehearsal Space", desc: "James Pitts Band Rehearsal" },
+              { id: "WACXMo641B4", title: "Misery", desc: "Live at Oak Hill Music" },
+              { id: "nqZ1xIAzV-U", title: "Are You Experienced", desc: "Hendrix Cover" },
+            ].map((video, i) => (
+              <div key={i} className="rounded-lg border border-white/10 bg-black/50 overflow-hidden">
+                <div className="aspect-video rounded-t-lg">
+                  <YouTubeEmbed videoId={video.id} title={video.title} />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-white">Video Title</h3>
-                  <p className="text-sm text-white/70">Era description</p>
+                  <h3 className="text-lg font-semibold text-white">{video.title}</h3>
+                  <p className="text-sm text-white/70">{video.desc}</p>
                 </div>
               </div>
             ))}
@@ -65,20 +72,16 @@ export default function VideosPage() {
           <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">Feel the Crowd</h2>
           <div className="grid gap-8 md:grid-cols-3">
             <div>
-              <div className="mb-4 aspect-video rounded-lg border border-white/10 bg-black/50">
-                <p className="flex h-full items-center justify-center text-white/60">
-                  "Fishnet" - WBS Blues Bash
-                </p>
+              <div className="mb-4 aspect-video rounded-lg border border-white/10 bg-black/50 overflow-hidden">
+                <YouTubeEmbed videoId="q0CNKedKKgw" title="Fishnet - WBS Blues Bash" />
               </div>
               <p className="mb-2 text-lg italic text-white">"The moment the room loses it."</p>
               <p className="mb-2 text-sm text-white/70">"Still can't feel my feet from this night."</p>
               <p className="text-xs text-white/60">– @KaylaDances</p>
             </div>
             <div>
-              <div className="mb-4 aspect-video rounded-lg border border-white/10 bg-black/50">
-                <p className="flex h-full items-center justify-center text-white/60">
-                  "Misery" - Live at Oak Hill Music
-                </p>
+              <div className="mb-4 aspect-video rounded-lg border border-white/10 bg-black/50 overflow-hidden">
+                <YouTubeEmbed videoId="WACXMo641B4" title="Misery - Live at Oak Hill Music" />
               </div>
               <p className="mb-2 text-lg italic text-white">
                 "Award-winning groove in one take."
@@ -87,10 +90,8 @@ export default function VideosPage() {
               <p className="text-xs text-white/60">– @NHBluesDad</p>
             </div>
             <div>
-              <div className="mb-4 aspect-video rounded-lg border border-white/10 bg-black/50">
-                <p className="flex h-full items-center justify-center text-white/60">
-                  "Voodoo Child" - Easy in McPherson
-                </p>
+              <div className="mb-4 aspect-video rounded-lg border border-white/10 bg-black/50 overflow-hidden">
+                <YouTubeEmbed videoId="jtS4NdaM7UA" title="Voodoo Child - Easy in McPherson" />
               </div>
               <p className="mb-2 text-lg italic text-white">
                 "James Pitts takes the solo into orbit."
@@ -113,22 +114,18 @@ export default function VideosPage() {
             late-night arrangement sessions.
           </p>
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-lg border border-white/10 bg-black/50">
-              <div className="aspect-video rounded-t-lg bg-brand-muted/20">
-                <p className="flex h-full items-center justify-center text-white/60">
-                  "Rehearsal Space" Episode
-                </p>
+            <div className="rounded-lg border border-white/10 bg-black/50 overflow-hidden">
+              <div className="aspect-video rounded-t-lg">
+                <YouTubeEmbed videoId="CpNWb4mFong" title="Rehearsal Space" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-white">Rehearsal Room Jams</h3>
                 <p className="text-sm text-white/70">Latest episode</p>
               </div>
             </div>
-            <div className="rounded-lg border border-white/10 bg-black/50">
-              <div className="aspect-video rounded-t-lg bg-brand-muted/20">
-                <p className="flex h-full items-center justify-center text-white/60">
-                  Tour Diary
-                </p>
+            <div className="rounded-lg border border-white/10 bg-black/50 overflow-hidden">
+              <div className="aspect-video rounded-t-lg">
+                <YouTubeEmbed videoId="fDXA6HRRIgY" title="Voodoo Child - WBS Blues Bash" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-white">Travel & Road Life</h3>

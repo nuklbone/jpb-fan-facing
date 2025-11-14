@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 export const metadata = {
   title: "James Pitts Band Photo Gallery | Live Shots & Fan Moments",
@@ -91,12 +90,11 @@ export default function PhotosPage() {
                 key={i}
                 className="group relative aspect-square overflow-hidden rounded-lg border border-white/10 hover:border-brand transition-colors cursor-pointer"
               >
-                <Image
-                  src={`/images/gallery/${img}`}
+                <img
+                  src={`/images/gallery/${encodeURIComponent(img)}`}
                   alt={`Live performance photo ${i + 1}`}
-                  fill
-                  className="object-cover transition-transform group-hover:scale-105"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -121,12 +119,11 @@ export default function PhotosPage() {
                 key={i}
                 className="group relative aspect-square overflow-hidden rounded-lg border border-white/10 hover:border-brand transition-colors cursor-pointer"
               >
-                <Image
-                  src={`/images/gallery/${img}`}
+                <img
+                  src={`/images/gallery/${encodeURIComponent(img)}`}
                   alt={`Fan photo ${i + 1}`}
-                  fill
-                  className="object-cover transition-transform group-hover:scale-105"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -152,12 +149,11 @@ export default function PhotosPage() {
                 key={i}
                 className="group relative aspect-square overflow-hidden rounded-lg border border-white/10 hover:border-brand transition-colors cursor-pointer"
               >
-                <Image
-                  src={`/images/gallery/${img}`}
+                <img
+                  src={`/images/gallery/${encodeURIComponent(img)}`}
                   alt={`Behind the scenes photo ${i + 1}`}
-                  fill
-                  className="object-cover transition-transform group-hover:scale-105"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -186,12 +182,11 @@ export default function PhotosPage() {
             ].map((item, i) => (
               <div key={i} className="rounded-lg border border-white/10 bg-black/50 p-4">
                 <div className="relative mb-4 aspect-[3/4] overflow-hidden rounded-lg">
-                  <Image
-                    src={`/images/gallery/${item.img}`}
+                  <img
+                    src={`/images/gallery/${encodeURIComponent(item.img)}`}
                     alt={item.title}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 50vw, 33vw"
+                    className="h-full w-full object-contain"
+                    loading="lazy"
                   />
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-white">{item.title}</h3>

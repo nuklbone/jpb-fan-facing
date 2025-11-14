@@ -13,7 +13,7 @@ export default function Home() {
       {/* Hero Panel */}
       <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden px-4 py-20">
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
-        <div className="absolute inset-0 z-0 bg-[url('/images/gallery/Barnful of Blues.jpg')] bg-cover bg-center bg-no-repeat opacity-20" />
+        <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20" style={{backgroundImage: "url('/images/gallery/Barnful%20of%20Blues.jpg')"}} />
         <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
             Soul-blues engineered for packed dance floors and unforgettable nights.
